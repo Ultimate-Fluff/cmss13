@@ -431,7 +431,7 @@
 
 /obj/item/reagent_container/glass/beaker/vial/sedative/Initialize()
 	. = ..()
-	reagents.add_reagent("chloralhydrate", 30)
+	reagents.add_reagent("chloral_hydrate", 30)
 	update_icon()
 /obj/item/reagent_container/glass/beaker/cryoxadone
 	name = "cryoxadone beaker"
@@ -450,12 +450,12 @@
 	reagents.add_reagent("clonexadone", 30)
 	update_icon()
 
-/obj/item/reagent_container/glass/beaker/sulphuric
-	name = "sulphuric acid beaker"
+/obj/item/reagent_container/glass/beaker/sulfuric
+	name = "sulfuric acid beaker"
 
-/obj/item/reagent_container/glass/beaker/sulphuric/Initialize()
+/obj/item/reagent_container/glass/beaker/sulfuric/Initialize()
 	. = ..()
-	reagents.add_reagent("sulphuric acid", 60)
+	reagents.add_reagent("sulfuric acid", 60)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/ethanol

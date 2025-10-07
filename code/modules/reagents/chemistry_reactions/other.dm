@@ -24,7 +24,7 @@
 	name = "nitroglycerin"
 	id = "nitroglycerin"
 	result = "nitroglycerin"
-	required_reagents = list("glycerol" = 1, "pacid" = 1, "sulphuric acid" = 1)
+	required_reagents = list("glycerol" = 1, "nitric acid" = 1)
 	result_amount = 2
 	sensitivity_threshold = 5.001
 
@@ -63,43 +63,51 @@
 	name = "Soporific"
 	id = "stoxin"
 	result = "stoxin"
-	required_reagents = list("sugar" = 4, "chloralhydrate" = 1)
+	required_reagents = list("sugar" = 4, "chloral_hydrate" = 1)
 	result_amount = 5
 
-/datum/chemical_reaction/chloralhydrate
+/datum/chemical_reaction/chloral_hydrate
 	name = "Chloral Hydrate"
-	id = "chloralhydrate"
-	result = "chloralhydrate"
+	id = "chloral_hydrate"
+	result = "chloral_hydrate"
 	required_reagents = list("chlorine" = 3, "ethanol" = 1, "water" = 1)
 	result_amount = 1
 
-/datum/chemical_reaction/iron_sulfate
-	name = "Iron Sulfate"
-	id = "iron_sulfate"
-	result = "iron_sulfate"
-	required_reagents = list("iron" = 1, "sulphuric acid" = 5)
+/datum/chemical_reaction/ferrous_sulfate
+	name = "Ferrous Sulfate"
+	id = "ferrous_sulfate"
+	result = "ferrous_sulfate"
+	required_reagents = list("iron" = 1, "sulfur" = 1, "oxygen" = 4, "water" = 7) ////Iron sulfate is a liquid, according to toxin.dm. The most common form of it is heptahydrate, requiring 7 water molecules. Liquefied iron sulfate has the formula FeSO4·7H2O
 	result_amount = 1
 
-/datum/chemical_reaction/iron_phoride_sulfate
-	name = "Iron Phoride Sulfate"
-	id = "iron_phoride_sulfate"
-	result = "iron_phoride_sulfate"
-	required_reagents = list("iron_sulfate" = 3, "phoron" = 1)
+/datum/chemical_reaction/ferrous_phoride_sulfate
+	name = "Ferrophoride Sulfate"
+	id = "ferrous_phoride_sulfate"
+	result = "ferrous_phoride_sulfate"
+	required_reagents = list("ferrous_sulfate" = 3, "phoron" = 1)
 	reaction_type = parent_type::reaction_type | CHEM_REACTION_FIRE
 	result_amount = 1
 
 /datum/chemical_reaction/sacid
 	name = "Sulfuric acid"
-	id = "sulphuric acid"
-	result = "sulphuric acid"
+	id = "sulfuric acid"
+	result = "sulfuric acid"
 	required_reagents = list("hydrogen" = 2, "sulfur" = 1, "oxygen" = 4)
+	result_amount = 1
+
+
+/datum/chemical_reaction/nacid
+	name = "Nitric acid"
+	id = "nitric_acid"
+	result = "nitric_acid"
+	required_reagents = list("hydrogen" = 1, "nitrogen" = 1, "oxygen" = 3)
 	result_amount = 1
 
 /datum/chemical_reaction/copper_sulfate
 	name = "Copper Sulfate"
 	id = "copper_sulfate"
 	result = "copper_sulfate"
-	required_reagents = list("copper" = 2, "sulphuric acid" = 5)
+	required_reagents = list("copper" = 2, "sulfur" = 1, "oxygen" = 4, "water" = 5) //Copper sulfate is a liquid, according to toxin.dm . Liquefied copper sulfate has the formula CuSO₄•5H₂O
 	reaction_type = parent_type::reaction_type | CHEM_REACTION_SMOKING
 	result_amount = 1
 
@@ -151,7 +159,7 @@
 	name = "Polytrinic acid"
 	id = "pacid"
 	result = "pacid"
-	required_reagents = list("sulphuric acid" = 1, "chlorine" = 1, "potassium" = 1)
+	required_reagents = list("sulfuric acid" = 1, "chlorine" = 1, "potassium" = 1)
 	result_amount = 3
 
 /datum/chemical_reaction/impedrezene
@@ -172,7 +180,7 @@
 	name = "Glycerol"
 	id = "glycerol"
 	result = "glycerol"
-	required_reagents = list("cornoil" = 3, "sulphuric acid" = 1)
+	required_reagents = list("cornoil" = 3, "sulfuric acid" = 1) // this needs a better recipe.
 	result_amount = 1
 
 /datum/chemical_reaction/flash_powder
@@ -209,7 +217,7 @@
 	name = "Napalm"
 	id = "napalm"
 	result = "napalm"
-	required_reagents = list("aluminum" = 1, "phoron" = 1, "sulphuric acid" = 1 )
+	required_reagents = list("aluminum" = 1, "phoron" = 1, "sulfuric acid" = 1 )
 	result_amount = 1
 
 /datum/chemical_reaction/chemfire/on_reaction(datum/reagents/holder, created_volume)
@@ -263,8 +271,8 @@
 
 /datum/chemical_reaction/phenolformaldehyde_resin
 	name = "Phenolformaldehyde"
-	id = "phenol_formaldehyde"
-	result = "phenol_formaldehyde"
+	id = "phenolformaldehyde"
+	result = "phenolformaldehyde"
 	required_reagents = list("formaldehyde" = 2, "phenol" = 1)
 	required_catalysts = list("methane" = 5)
 	reaction_type = CHEM_REACTION_ENDOTHERMIC
@@ -344,7 +352,7 @@
 	name = "Potassium Chlorophoride"
 	id = "potassium_chlorophoride"
 	result = "potassium_chlorophoride"
-	required_reagents = list("potassium_chloride" = 1, "phoron" = 1, "chloralhydrate" = 1)
+	required_reagents = list("potassium_chloride" = 1, "phoron" = 1, "chloral_hydrate" = 1)
 	reaction_type = parent_type::reaction_type | CHEM_REACTION_BUBBLING
 	result_amount = 4
 
@@ -352,7 +360,7 @@
 	name = "Potassium Phorosulfate"
 	id = "potassium_phorosulfate"
 	result = "potassium_phorosulfate"
-	required_reagents = list("potassium_chlorophoride" = 1, "sulphuric acid" = 4)
+	required_reagents = list("potassium_chlorophoride" = 1, "sulfuric acid" = 4)
 	reaction_type = CHEM_REACTION_ENDOTHERMIC
 	result_amount = 1
 
@@ -426,14 +434,14 @@
 	name = "Foam surfactant"
 	id = "foam surfactant"
 	result = "fluorosurfactant"
-	required_reagents = list("fluorine" = 2, "carbon" = 2, "sulphuric acid" = 1)
+	required_reagents = list("fluorine" = 2, "carbon" = 2, "sulfuric acid" = 1)
 	result_amount = 5
 
 /datum/chemical_reaction/stablefoam
 	name = "Stabilized metallic foam"
 	id = "stablefoam"
 	result = "stablefoam"
-	required_reagents = list("fluorosurfactant" = 1, "iron" = 1, "sulphuric acid" = 1)
+	required_reagents = list("fluorosurfactant" = 1, "iron" = 1, "sulfuric acid" = 1)
 	result_amount = 1
 
 /datum/chemical_reaction/foam
@@ -511,7 +519,7 @@
 	name = "Dinitroaniline"
 	id = "dinitroaniline"
 	result = "dinitroaniline"
-	required_reagents = list("ammonia" = 1, "sulphuric acid" = 1, "nitrogen" = 1)
+	required_reagents = list("ammonia" = 1, "sulfuric acid" = 1, "nitrogen" = 1)
 	result_amount = 3
 
 /datum/chemical_reaction/plantbgone

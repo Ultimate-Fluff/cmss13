@@ -32,9 +32,9 @@
 /datum/supply_packs/pyrotec
 	name = "pyrotechnics crate"
 	contains = list(
-		/obj/item/reagent_container/glass/beaker/sulphuric,
-		/obj/item/reagent_container/glass/beaker/sulphuric,
-		/obj/item/reagent_container/glass/beaker/sulphuric,
+		/obj/item/reagent_container/glass/beaker/sulfuric,
+		/obj/item/reagent_container/glass/beaker/sulfuric,
+		/obj/item/reagent_container/glass/beaker/sulfuric,
 		/obj/item/reagent_container/glass/beaker/ethanol,
 		/obj/item/reagent_container/glass/beaker/ethanol,
 		/obj/item/reagent_container/glass/beaker/ethanol,

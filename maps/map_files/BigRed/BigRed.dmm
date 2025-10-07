@@ -11377,7 +11377,7 @@
 /area/bigredv2/outside/office_complex)
 "bag" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/glass/beaker/sulphuric,
+/obj/item/reagent_container/glass/beaker/sulfuric,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/white,
 /area/bigredv2/outside/office_complex)

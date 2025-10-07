@@ -831,7 +831,7 @@ GLOBAL_LIST_EMPTY(gene_tag_masks)   // Gene obfuscation for delicious trial and 
 	packet_icon = "seed-nettle"
 	plant_icon = "nettle"
 	harvest_repeat = 1
-	chems = list("plantmatter" = list(1,50), "sulphuric acid" = list(0,1))
+	chems = list("plantmatter" = list(1,50), "sulfuric acid" = list(0,1))
 	lifespan = 30
 	maturation = 6
 	production = 6

@@ -46,7 +46,7 @@
 		"water",
 		"ethanol",
 		"sugar",
-		"sulphuric acid",
+		"sulfuric acid",
 	)
 	/// Has it been hacked
 	var/hacked_check = DISPENSER_UNHACKABLE

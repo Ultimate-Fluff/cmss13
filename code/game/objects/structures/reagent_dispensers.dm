@@ -165,7 +165,7 @@
 	name = "sulfuric acid tank"
 	desc = "A sulfuric acid tank"
 	icon_state = "sacidtank"
-	chemical = "sulphuric acid"
+	chemical = "sulfuric acid"
 
 /obj/structure/reagent_dispensers/pacidtank
 	name = "polytrinic acid tank"

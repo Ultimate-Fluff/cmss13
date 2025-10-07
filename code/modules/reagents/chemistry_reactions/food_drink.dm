@@ -28,7 +28,7 @@
 	name = "Soy Sauce"
 	id = "soysauce"
 	result = "soysauce"
-	required_reagents = list("soymilk" = 4, "sulphuric acid" = 1)
+	required_reagents = list("soymilk" = 4, "sulfuric acid" = 1)
 	result_amount = 5
 
 /datum/chemical_reaction/condensedcapsaicin
@@ -679,7 +679,7 @@
 	name = "Acid Spit"
 	id = "acidspit"
 	result = "acidspit"
-	required_reagents = list("wine" = 5, "sulphuric acid" = 1)
+	required_reagents = list("wine" = 5, "sulfuric acid" = 1)
 	result_amount = 6
 
 /datum/chemical_reaction/amasec
