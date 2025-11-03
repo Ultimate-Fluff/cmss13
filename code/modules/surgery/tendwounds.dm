@@ -49,6 +49,7 @@
 			SPAN_NOTICE("[user] closes the incision on your [surgery.affected_limb.display_name] with a line of neat sutures."),
 			SPAN_NOTICE("[user] closes the incision on [target]'s [surgery.affected_limb.display_name] with a line of neat sutures."))
 
+		to_chat(target, SPAN_NOTICE("Your [surgery.affected_limb.display_name] stops hurting."))
 		log_interact(user, target, "[key_name(user)] finished suturing an incision in [key_name(target)]'s [surgery.affected_limb.display_name] with \the [tool], ending [surgery].")
 	else
 		user.affected_message(target,
@@ -56,6 +57,7 @@
 			SPAN_NOTICE("[user] closes the incision on your [surgery.affected_limb.display_name] with a line of neat sutures, but some injuries remain."),
 			SPAN_NOTICE("[user] closes the incision on [target]'s [surgery.affected_limb.display_name] with a line of neat sutures, but some injuries remain."))
 
+		to_chat(target, SPAN_NOTICE("Your [surgery.affected_limb.display_name] stops hurting."))
 		log_interact(user, target, "[key_name(user)] finished suturing an incision in [key_name(target)]'s [surgery.affected_limb.display_name] with \the [tool], ending [surgery].")
 
 	target.incision_depths[target_zone] = SURGERY_DEPTH_SURFACE

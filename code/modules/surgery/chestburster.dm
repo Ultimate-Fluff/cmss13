@@ -69,6 +69,7 @@
 		SPAN_NOTICE("[user] starts to carefully cut the tubes connecting the alien larva to your vital organs with \the [tool]."),
 		SPAN_NOTICE("[user] starts to carefully cut the tubes connecting the alien larva to [target]'s vital organs with \the [tool]."))
 
+	target.custom_pain("The larva is struggling inside you! Your chest hurts so much!", 1)
 	log_interact(user, target, "[key_name(user)] began cutting the roots of a larva in [key_name(target)]'s [surgery.affected_limb.display_name] with \the [tool], attempting to begin [surgery].")
 
 /datum/surgery_step/cut_larval_pseudoroots/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -137,7 +138,7 @@
 			SPAN_NOTICE("[user] tries to forcefully rip the larva from your chest."),
 			SPAN_NOTICE("[user] tries to forcefully rip the larva from [target]'s chest."))
 
-	target.custom_pain("Something hurts horribly in your chest!",1)
+	target.custom_pain("IT'S COMING OUT! THE PRESSURE! IT HURTS! AAAARGH!",1)
 	log_interact(user, target, "[key_name(user)] started to remove an embryo from [key_name(target)]'s ribcage.")
 
 /datum/surgery_step/remove_larva/success(mob/living/carbon/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -177,6 +178,7 @@
 			A.forceMove(target.loc)
 			target.status_flags &= ~XENO_HOST
 
+		to_chat(target, SPAN_NOTICE("It's out! It's a girl! It's dead. You feel a monumental amount of relief."))
 		log_interact(user, target, "[key_name(user)] removed an embryo from [key_name(target)]'s ribcage with [tool ? "\the [tool]" : "their hands"], ending [surgery].")
 
 /datum/surgery_step/remove_larva/failure(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)

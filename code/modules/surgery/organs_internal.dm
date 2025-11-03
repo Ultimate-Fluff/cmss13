@@ -69,7 +69,7 @@ and organ transplant code which may come in handy in future but haven't been edi
 			SPAN_NOTICE("[user] begins to treat your damaged [damaged_organs[1]] with [toolname]."),
 			SPAN_NOTICE("[user] begins to treat [target]'s damaged [damaged_organs[1]] with [toolname]."))
 
-	target.custom_pain("The pain in your [surgery.affected_limb.display_name] is living hell!", 1)
+	target.custom_pain("You can feel [user]'s hand manipulating your organs! The pressure and pain in your [surgery.affected_limb.display_name] is a living hell!", 1)
 	playsound(target.loc, 'sound/handling/bandage.ogg', 25, TRUE)
 	log_interact(user, target, "[key_name(user)] began mending organs in [key_name(target)]'s [surgery.affected_limb.display_name], beginning [surgery].")
 
@@ -84,6 +84,8 @@ and organ transplant code which may come in handy in future but haven't been edi
 
 			user.count_niche_stat(STATISTICS_NICHE_SURGERY_ORGAN_REPAIR)
 			I.rejuvenate()
+
+			to_chat(target, SPAN_NOTICE("You feel so much better."))
 			target.pain.recalculate_pain()
 			break
 

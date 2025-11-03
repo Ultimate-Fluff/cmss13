@@ -55,7 +55,9 @@
 
 	if(prob(40))
 		user.add_blood(target.get_blood_color(), BLOOD_HANDS)
+
 	target.pain.recalculate_pain()
+	target.custom_pain("You stopped bleeding in your [surgery.affected_limb.display_name]. You feel better.", 1)
 	log_interact(user, target, "[key_name(user)] successfully repaired internal bleeding in [key_name(target)]'s [surgery.affected_limb.display_name], ending [surgery].")
 
 /datum/surgery_step/fix_vein/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)

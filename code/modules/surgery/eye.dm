@@ -42,6 +42,7 @@
 		SPAN_NOTICE("[user] starts to separate the corneas of your eyes with \the [tool]."),
 		SPAN_NOTICE("[user] starts to separate the corneas of [target]'s eyes with \the [tool]."))
 
+	target.custom_pain("It stings! It stings so much!", 1)
 	log_interact(user, target, "[key_name(user)] started to separate the cornea on [key_name(target)]'s eyes with \the [tool].")
 
 /datum/surgery_step/separate_cornea/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -50,6 +51,7 @@
 		SPAN_NOTICE("[user] has separated your corneas."),
 		SPAN_NOTICE("[user] has separated [target]'s corneas."))
 
+	to_chat(target, SPAN_NOTICE("Everything's gone blurry..."))
 	log_interact(user, target, "[key_name(user)] separated the cornea on [key_name(target)]'s eyes with \the [tool], starting [surgery].")
 
 	target.incision_depths[target_zone] = SURGERY_DEPTH_SHALLOW
@@ -81,6 +83,7 @@
 		SPAN_NOTICE("[user] begins to lift the corneas from your eyes with \the [tool]."),
 		SPAN_NOTICE("[user] begins to lift the corneas from [target]'s eyes with \the [tool]."))
 
+	target.custom_pain("Shit, this feels weird!", 1)
 	log_interact(user, target, "[key_name(user)] started to lift the cornea from [key_name(target)]'s eyes with \the [tool].")
 
 /datum/surgery_step/lift_eyes/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -89,6 +92,7 @@
 		SPAN_NOTICE("[user] has lifted your corneas."),
 		SPAN_NOTICE("[user] has lifted [target]'s corneas."))
 
+	to_chat(target, SPAN_NOTICE("You still can't see much..."))
 	log_interact(user, target, "[key_name(user)] lifted the cornea from [key_name(target)]'s eyes with \the [tool].")
 
 /datum/surgery_step/lift_eyes/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/eye_repair/surgery)
@@ -117,6 +121,7 @@
 		SPAN_NOTICE("[user] begins to mend the nerves and lenses in your eyes with \the [tool]."),
 		SPAN_NOTICE("[user] begins to mend the nerves and lenses in [target]'s eyes with \the [tool]."))
 
+	target.custom_pain("You feel [user] poking around inside your eye! It hurts!", 1)
 	log_interact(user, target, "[key_name(user)] started to mend the nerves and lenses in [key_name(target)]'s eyes with \the [tool].")
 
 /datum/surgery_step/mend_eyes/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -125,6 +130,7 @@
 		SPAN_NOTICE("[user] mends the nerves and lenses in your eyes."),
 		SPAN_NOTICE("[user] mends the nerves and lenses in [target]'s eyes."))
 
+	to_chat(target, SPAN_NOTICE("Everything's still blurry!"))
 	log_interact(user, target, "[key_name(user)] mended the nerves and lenses in [key_name(target)]'s eyes with \the [tool].")
 
 /datum/surgery_step/mend_eyes/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/eye_repair/surgery)
@@ -152,8 +158,8 @@
 		SPAN_NOTICE("[user] begins to reattach your corneas with \the [tool]."),
 		SPAN_NOTICE("[user] begins to reattach [target]'s corneas with \the [tool]."))
 
+	target.custom_pain("Oh, god, it burns! Your eyes burn so much!", 1)
 	log_interact(user, target, "[key_name(user)] began to cauterize the incision around [key_name(target)]'s eyes with \the [tool].")
-
 
 /datum/surgery_step/cauterize/eyes/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/eye_repair/surgery)
 	user.affected_message(target,
@@ -163,6 +169,7 @@
 
 	log_interact(user, target, "[key_name(user)] cauterized the incision around [key_name(target)]'s eyes with \the [tool], ending [surgery].")
 
+	to_chat(target, SPAN_NOTICE("It's a miracle! You can see again!"))
 	target.incision_depths[target_zone] = SURGERY_DEPTH_SURFACE
 	target.disabilities &= ~NEARSIGHTED
 	target.sdisabilities &= ~DISABILITY_BLIND

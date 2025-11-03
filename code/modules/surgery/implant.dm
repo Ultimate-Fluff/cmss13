@@ -118,7 +118,7 @@
 		SPAN_NOTICE("[user] begins implanting \the [tool] into your [surgery.affected_limb.cavity]."),
 		SPAN_NOTICE("[user] begins implanting \the [tool] into [target]'s [surgery.affected_limb.cavity]."))
 
-	target.custom_pain("The pain in your [surgery.affected_limb.cavity] is living hell!", 1)
+	target.custom_pain("The pain in your [surgery.affected_limb.cavity] is a living hell!", 1)
 	log_interact(user, target, "[key_name(user)] started to put \the [tool] inside [key_name(target)]'s [surgery.affected_limb.cavity].")
 
 /datum/surgery_step/place_item/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)

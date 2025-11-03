@@ -80,7 +80,7 @@
 		return FALSE
 
 	if((target.mob_flags & EASY_SURGERY) ? !skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) : !skillcheck(user, SKILL_SURGERY, required_surgery_skill))
-		to_chat(user, SPAN_WARNING("This operation is more complex than you're trained for!"))
+		to_chat(user, SPAN_WARNING("This operation is more complex than what you're trained for!"))
 		return FALSE
 
 	if(target.pulledby?.grab_level == GRAB_CARRY)
@@ -97,7 +97,7 @@
 	for(var/mob/living/potential_blocker in get_turf(target))
 		if(potential_blocker == user || potential_blocker == target)
 			continue
-		to_chat(user, SPAN_WARNING("You can't operate when you don't have enough space! Remove everybody else."))
+		to_chat(user, SPAN_WARNING("You can't operate when you don't have enough space! Remove everybody else from the area!"))
 		return FALSE
 
 	if(user == target)

@@ -148,14 +148,14 @@ affected_limb, or location vars. Also, in that case there may be a wait between 
 
 		switch(tool_modifier) //Implicitly means tool exists as accept_any_item item or accept_hand would = 1x. No message for 1x - that's the default.
 			if(SURGERY_TOOL_MULT_SUBOPTIMAL)
-				message += "this tool is[pick("n't ideal", " not the best")]"
+				message += "this tool [pick("is suitable, but there is a better tool for this step", "leaves something to be desired", "is a bit unorthodox for this step")]"
 			if(SURGERY_TOOL_MULT_SUBSTITUTE)
-				message += "this tool is[pick("n't suitable", " a bad fit", " difficult to use")]"
+				message += "this tool [pick("feels a little wonky in your hands", "is not the best out there", "has better uses")]"
 			if(SURGERY_TOOL_MULT_BAD_SUBSTITUTE)
-				message += "this tool is [pick("awful", "barely usable")]"
+				message += "this tool [pick("barely functions in your hand", "makes you feel bad for using it", "is not something you should operate with")]"
 				failure_penalties += 1
 			if(SURGERY_TOOL_MULT_AWFUL)
-				message += "this tool is [pick("awful", "barely usable")]"
+				message += "this tool [pick("is the worst thing imaginable to use for this surgery", "comes with a pink slip", "may as well be a piece of garbage in your hand")]"
 				failure_penalties += 2
 
 		switch(surface_modifier)
@@ -201,8 +201,8 @@ affected_limb, or location vars. Also, in that case there may be a wait between 
 	else if(target.stat == CONSCIOUS && prob(pain_failure_chance)) //Pain can cause a step to fail.
 		do_after(user, max(rand(step_duration * 0.1, step_duration * 0.5), 0.5), INTERRUPT_ALL|INTERRUPT_DIFF_INTENT,
 				BUSY_ICON_FRIENDLY, target, INTERRUPT_MOVED, BUSY_ICON_MEDICAL) //Brief do_after so that the pain interrupt doesn't happen instantly.
-		to_chat(user, SPAN_DANGER("[target] moved during the surgery! Use anesthetics or painkillers!"))
-		to_chat(target, SPAN_DANGER("The pain was too much, you couldn't hold still!"))
+		to_chat(user, SPAN_DANGER("[target] squirmed in pain during the operation! Use anesthetics or painkillers if the patient is having trouble breathing!"))
+		to_chat(target, SPAN_DANGER("The pain was too much! You squirmed away from the tool!"))
 		if(failure(user, target, target_zone, tool, tool_type, surgery)) //Failure returns TRUE if the step should complete anyway.
 			advance = TRUE
 		target.emote("pain")

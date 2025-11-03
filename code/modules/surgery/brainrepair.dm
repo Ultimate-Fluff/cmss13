@@ -43,6 +43,7 @@
 		SPAN_NOTICE("[user] begins picking chips of bone out of your brain with \the [tool]."),
 		SPAN_NOTICE("[user] begins picking chips of bone out of [target]'s brain with \the [tool]."))
 
+	target.custom_pain("You can feel [user] picking around in your skull! Ow, ouch, owie!", 1)
 	log_interact(user, target, "[key_name(user)] started taking bone chips out of [key_name(target)]'s brain with \the [tool], possibly beginning [surgery]")
 
 /datum/surgery_step/remove_bone_chips/success(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -62,6 +63,7 @@
 	target.jitteriness = 0
 	target.pain.recalculate_pain()
 
+	to_chat(target, SPAN_NOTICE("The rattling and piercing feelings in your brain stopped. You feel better."))
 	log_interact(user, target, "[key_name(user)] finished taking bone chips out of [key_name(target)]'s brain with \the [tool], finishing [surgery].")
 
 /datum/surgery_step/remove_bone_chips/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -92,6 +94,7 @@
 		SPAN_NOTICE("[user] begins to mend the hematoma in your brain with \the [tool]."),
 		SPAN_NOTICE("[user] begins to mend the hematoma in [target]'s brain with \the [tool]."))
 
+	target.custom_pain("You can feel [user] messing with the swelling in your skull! The pressure is excruciating!", 1)
 	log_interact(user, target, "[key_name(user)] started mending a hematoma in [key_name(target)]'s brain with \the [tool].")
 
 /datum/surgery_step/treat_hematoma/success(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
@@ -100,6 +103,7 @@
 		SPAN_NOTICE("[user] finishes mending the hematoma in your brain."),
 		SPAN_NOTICE("[user] finishes mending the hematoma in [target]'s brain."))
 
+	to_chat(target, SPAN_NOTICE("The pressure in your brain is gone... Everything is much clearer to you, now."))
 	log_interact(user, target, "[key_name(user)] finished mending a hematoma in [key_name(target)]'s brain with \the [tool], beginning [surgery].")
 
 	var/datum/internal_organ/brain/B = target.internal_organs_by_name["brain"]
