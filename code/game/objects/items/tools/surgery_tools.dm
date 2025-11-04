@@ -16,7 +16,7 @@
  */
 /obj/item/tool/surgery/retractor
 	name = "retractor"
-	desc = "Retracts stuff."
+	desc = "Used to pry apart an incision."
 	icon_state = "retractor"
 	matter = list("metal" = 10000, "glass" = 5000)
 	flags_atom = FPRINT|CONDUCT
@@ -24,7 +24,7 @@
 
 /obj/item/tool/surgery/retractor/predatorretractor
 	name = "opener"
-	desc = "Retracts stuff."
+	desc = "Used to pry apart the incision."
 	icon_state = "predator_retractor"
 
 /*
@@ -33,7 +33,7 @@
  */
 /obj/item/tool/surgery/hemostat
 	name = "hemostat"
-	desc = "You think you have seen this before."
+	desc = "Used to pinch blood vessels shut so the patient does not bleed all over the place."
 	icon_state = "hemostat"
 	matter = list("metal" = 5000, "glass" = 2500)
 	flags_atom = FPRINT|CONDUCT
@@ -43,7 +43,6 @@
 
 /obj/item/tool/surgery/hemostat/predatorhemostat
 	name = "pincher"
-	desc = "You think you have seen this before."
 	icon_state = "predator_hemostat"
 
 /*
@@ -52,7 +51,7 @@
  */
 /obj/item/tool/surgery/cautery
 	name = "cautery"
-	desc = "This stops bleeding."
+	desc = "Uses heat to burn bleeding blood vessels shut as you close the incision."
 	icon_state = "cautery"
 	matter = list("metal" = 5000, "glass" = 2500)
 	flags_atom = FPRINT|CONDUCT
@@ -63,7 +62,6 @@
 
 /obj/item/tool/surgery/cautery/predatorcautery
 	name = "cauterizer"
-	desc = "This stops bleeding."
 	icon_state = "predator_cautery"
 	flags_item = NO_FLAGS
 
@@ -73,7 +71,7 @@
  */
 /obj/item/tool/surgery/surgicaldrill
 	name = "surgical drill"
-	desc = "You can drill using this item. You dig?"
+	desc = "This drills holes into bones so you can implant things inside them."
 	icon_state = "drill"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	matter = list("metal" = 15000, "glass" = 10000)
@@ -85,7 +83,6 @@
 
 /obj/item/tool/surgery/surgicaldrill/predatorsurgicaldrill
 	name = "bone drill"
-	desc = "You can drill using this item. You dig?"
 	icon_state = "predator_drill"
 
 /*
@@ -94,7 +91,7 @@
  */
 /obj/item/tool/surgery/scalpel
 	name = "scalpel"
-	desc = "Cut, cut, and once more cut."
+	desc = "Cuts skin to make an incision. Can't do surgery without it!"
 	icon_state = "scalpel"
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
@@ -117,7 +114,7 @@
 
 /obj/item/tool/surgery/scalpel/predatorscalpel
 	name = "cutter"
-	desc = "Cut, cut, and once more cut."
+	desc = "Cuts skin to make an incision. Can't do surgery without it!"
 	icon_state = "predator_scalpel"
 
 /*
@@ -206,7 +203,7 @@
 
 /obj/item/tool/surgery/bonegel
 	name = "bottle of bone gel"
-	desc = "A container for bone gel that often needs to be refilled from a specialized machine."
+	desc = "A bottle filled with a clay-like substance that mimics bone, used to seal fractures. It must be refilled by a specialized machine."
 	desc_lore = "Bone gel is a biological synthetic bone-analogue with the consistency of clay. It is capable of fixing hairline fractures and complex fractures alike. Bone gel should not be used to fix missing bone, as it does not replace the body's bone marrow. Overuse in a short period may cause acute immunodeficiency or anemia."
 	icon_state = "bone-gel"
 	w_class = SIZE_SMALL
@@ -254,8 +251,8 @@
 
 	if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_DOCTOR)) //Know how much you will be using if you can use it
 		return
-	. += SPAN_NOTICE("You would need to use [fracture_fix_cost]% of the bone gel to repair a fracture.")
-	. += SPAN_NOTICE("You would need to use [mend_bones_fix_cost]% of the bone gel to mend bones.")
+	. += SPAN_NOTICE("You need to use [fracture_fix_cost]% of the bone gel to repair a fracture.")
+	. += SPAN_NOTICE("You need to use [mend_bones_fix_cost]% of the bone gel to mend bones.")
 
 /obj/item/tool/surgery/bonegel/proc/refill_gel(obj/refilling_obj, mob/user)
 	if(unlimited_gel)
@@ -297,7 +294,7 @@
 
 /obj/item/tool/surgery/bonegel/predatorbonegel
 	name = "gel gun"
-	desc = "Inside is a liquid that is similar in effect to bone gel, but requires much smaller quantities, allowing near infinite use from a single capsule."
+	desc = "Inside is a liquid that is similar in effect to bone gel, but requires much smaller quantities that allow near infinite use from a single capsule."
 	base_icon_state = "predator_bone-gel"
 	icon_state = "predator_bone-gel"
 	unlimited_gel = TRUE
@@ -400,7 +397,7 @@ t. optimisticdude
 
 /obj/item/tool/surgery/drapes //Does nothing at present. Might be useful for increasing odds of success.
 	name = "surgical drapes"
-	desc = "Used to cover a limb prior to the beginning of a surgical procedure"
+	desc = "Used to cover a limb prior to the beginning of a surgical procedure."
 	icon_state = "drapes"
 	gender = PLURAL
 	w_class = SIZE_SMALL
@@ -478,7 +475,7 @@ t. optimisticdude
 
 /obj/item/tool/surgery/WYautopsy
 	name = "\improper Weyland Brand Automatic Autopsy System(TM)"
-	desc = "Putting the FUN back in Autopsy.  This little gadget performs an entire autopsy of whatever strange life form you've found in about 30 seconds."
+	desc = "Putting the FUN back in Autopsy. This little gadget performs an entire autopsy of whatever strange life form you've found in about 30 seconds."
 	icon_state = "scalpel_laser_2"
 	damtype = "fire"
 	force = 0
@@ -497,13 +494,13 @@ t. optimisticdude
 		return
 	if(active)
 		resetting = 1
-		to_chat(usr, "Resetting tool, This will take a few seconds...  Do not attempt to use the tool during the reset or it may malfunction.")
+		to_chat(usr, "Resetting tool. This will take a few seconds...  Do not attempt to use the tool during the reset or it may malfunction.")
 		while(active) //While keep running until it's reset (in case of lag-spam)
 			active = 0 //Sets it to not active
 			to_chat(usr, "Processing...")
 			spawn(60) // runs a timer before the final check.  timer is longer than autopsy timers.
 				if(!active)
-					to_chat(usr, "System Reset completed")
+					to_chat(usr, "System Reset completed!")
 					resetting = 0
 
 /obj/item/tool/surgery/WYautopsy/attack(mob/living/carbon/xenomorph/T as mob, mob/living/user as mob)
@@ -511,25 +508,25 @@ t. optimisticdude
 	set name = "Perform Alien Autopsy"
 	set src in usr*/
 	if(resetting)
-		to_chat(usr, "Tool is currently returning to factory default.  If you have been waiting, try running the reset again.")
+		to_chat(usr, "This tool is currently returning to factory default settings. If you have been waiting, try running the reset again.")
 	if(!isxeno(T))
 		to_chat(usr, "What are you, some sort of fucking MONSTER?")
 		return
 	if(T.health > 0)
-		to_chat(usr, "Nope.")
+		to_chat(usr, "What the hell are you doing? It's alive! Fight!")
 		return
 	if(active)
-		to_chat(usr, "Your already performing an autopsy")
+		to_chat(usr, "You're already performing an autopsy!")
 		return
 	if(istype(T, /mob/living/carbon/xenomorph/larva))
-		to_chat(usr, "It's too young... (This will be in a future update)")
+		to_chat(usr, "It's too young...")
 		return
 	active = 1
 	var CHECK = user.loc
 	playsound(loc, 'sound/weapons/pierce.ogg', 25)
 	to_chat(usr, "You begin to cut into the alien... This might take some time...")
 	if(T.health >-100)
-		to_chat(usr, "HOLY SHIT IT'S STILL ALIVE.  It knocks you down as it jumps up.")
+		to_chat(usr, "HOLY SHIT! IT'S STILL ALIVE! It springs to life and knocks you down with its weight!")
 		usr.apply_effect(20, WEAKEN)
 		to_chat(T, "You feel TREMENDOUS pain and jump back up to use the last of your strength to kill [usr] with your final moments of life. (~10 seconds)")
 		T.health = T.maxHealth*2 //It's hulk levels of angry.
@@ -542,9 +539,9 @@ t. optimisticdude
 		if(0)
 			spawn(50)
 				if(CHECK != user.loc)
-					to_chat(usr, "This is difficult, you probably shouldn't move")
+					to_chat(usr, "This procedure requires intense focusing. Stay still.")
 					return
-				to_chat(usr, "You've cut through the outer layers of Chitin")
+				to_chat(usr, "You've cut through the outer layers of Chitin.")
 				new /obj/item/oldresearch/Chitin(T.loc) //This will be 1-3 Chitin eventually (depending on tier)
 				new /obj/item/oldresearch/Chitin(T.loc) //This will be 1-3 Chitin eventually (depending on tier)
 				T.butchery_progress++
@@ -552,16 +549,16 @@ t. optimisticdude
 		if(1)
 			spawn(50)
 				if(CHECK != user.loc)
-					to_chat(usr, "This is difficult, you probably shouldn't move.")
+					to_chat(usr, "This procedure requires intense focusing. Stay still.")
 					return
-				to_chat(usr, "You've cut into the chest cavity and retreived a sample of blood.")
+				to_chat(usr, "You've cut into the chest cavity and retrieved a sample of blood.")
 				new /obj/item/oldresearch/Blood(T.loc)//This will be a sample of blood eventually
 				T.butchery_progress++
 				active = 0
 		if(2)
 			spawn(50)
 				if(CHECK != user.loc)
-					to_chat(usr, "This is difficult, you probably shouldn't move.")
+					to_chat(usr, "This procedure requires intense focusing. Stay still.")
 					return
 				//to_chat(usr, "You've cut out an intact organ.")
 				to_chat(usr, "You've cut out some Biomass...")
@@ -571,9 +568,9 @@ t. optimisticdude
 		if(3)
 			spawn(50)
 				if(CHECK != user.loc)
-					to_chat(usr, "This is difficult, you probably shouldn't move.")
+					to_chat(usr, "This procedure requires intense focusing. Stay still.")
 					return
-				to_chat(usr, "You scrape out the remaining biomass.")
+				to_chat(usr, "You've scraped out the remaining biomass.")
 				active = 0
 				new /obj/item/oldresearch/Resin(T.loc)
 				new /obj/effect/decal/remains/xeno(T.loc)
