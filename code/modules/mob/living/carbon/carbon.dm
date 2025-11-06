@@ -101,6 +101,11 @@
 				if(current_surgery)
 					if(current_surgery.attempt_next_step(user, weapon))
 						return TRUE //Cancel attack.
+
+				if(current_surgery && (weapon in SURGERY_TOOLS_CAUTERIZE)) //emergency close times.
+					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
+					if(initiate_surgery_moment(weapon, src, affecting, user))
+						return TRUE
 				else
 					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
 					if(initiate_surgery_moment(weapon, src, affecting, user))
@@ -111,6 +116,7 @@
 				if(current_surgery)
 					if(current_surgery.attempt_next_step(user, weapon))
 						return TRUE
+
 				else
 					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
 					if(initiate_surgery_moment(weapon, src, affecting, user))
