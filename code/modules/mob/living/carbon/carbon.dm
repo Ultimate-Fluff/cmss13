@@ -102,9 +102,9 @@
 					if(current_surgery.attempt_next_step(user, weapon))
 						return TRUE //Cancel attack.
 
-					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
-					if(initiate_surgery_moment(weapon, src, affecting, user))
-						return TRUE
+				var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
+				if(initiate_surgery_moment(weapon, src, affecting, user))
+					return TRUE
 
 			if(INTENT_DISARM) //Same as help but without the shrapnel dig attempt.
 				var/datum/surgery/current_surgery = active_surgeries[user.zone_selected]
