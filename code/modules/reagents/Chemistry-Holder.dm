@@ -6,7 +6,7 @@
 	var/trigger_volatiles = FALSE
 	var/allow_star_shape = TRUE
 	var/exploded = FALSE
-	var/endothermic_reaction_occuring = FALSE
+	var/endothermic_reaction_occurring = FALSE
 	var/datum/weakref/source_mob
 
 	var/locked = FALSE
@@ -310,7 +310,7 @@
 						multiplier = max(multiplier, 1) //this shouldn't happen ...
 						set_data(reaction.result, preserved_data)
 					if(CHECK_BITFIELD(reaction.reaction_type, CHEM_REACTION_CALM) && !CHECK_BITFIELD(reaction.reaction_type, CHEM_REACTION_ENDOTHERMIC)) //mix the chemicals
-						if(endothermic_reaction_occuring)
+						if(endothermic_reaction_occurring)
 							continue
 						for(var/required_reagent in reaction.required_reagents)
 							remove_reagent(required_reagent, (multiplier * reaction.required_reagents[required_reagent]), safety = TRUE)
@@ -420,7 +420,7 @@
 		if((catalysts_in_holder.id in reaction.required_catalysts) && catalysts_in_holder.volume >= reaction.required_catalysts[catalysts_in_holder.id])
 			required_catalysts_present++
 	if(!(length(reaction.required_reagents) == required_reagents_present && length(reaction.required_catalysts) == required_catalysts_present))
-		endothermic_reaction_occuring = FALSE //forgive me
+		endothermic_reaction_occurring = FALSE //forgive me
 		handle_reactions()
 		return
 	var/list/seen = viewers(2, get_turf(my_atom))
@@ -437,7 +437,7 @@
 	for(var/mob/seen_mob in this_turf)
 		if(prob(15))
 			to_chat(seen_mob, SPAN_NOTICE("[icon2html(my_atom, seen_mob)] [my_atom] feels extremely cold to touch."))
-	endothermic_reaction_occuring = TRUE
+	endothermic_reaction_occurring = TRUE
 	addtimer(CALLBACK(src, PROC_REF(handle_endothermic_reaction), reaction), 1 SECONDS, TIMER_UNIQUE)
 
 /datum/reagents/proc/isolate_reagent(reagent)
