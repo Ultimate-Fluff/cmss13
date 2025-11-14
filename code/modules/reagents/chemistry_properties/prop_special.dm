@@ -16,7 +16,7 @@
 /datum/chem_property/special/optimized
 	name = PROPERTY_OPTIMIZED
 	code = "OPM"
-	description = "Chemical molecule is structured diffrently, resulting in more efficient and easy synthesis process."
+	description = "Chemical molecule is structured differently, resulting in more efficient and easy synthesis process."
 	rarity = PROPERTY_LEGENDARY
 	category = PROPERTY_TYPE_METABOLITE
 
@@ -289,7 +289,7 @@
 	M.set_effect(0, PARALYZE)
 	M.silent = 0
 	M.dizziness = 0
-	M.drowsyness = 0
+	M.drowsiness = 0
 	M.stuttering = 0
 	M.confused = 0
 	M.sleeping = 0
