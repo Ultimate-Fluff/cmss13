@@ -614,9 +614,9 @@
 	var/mode_id
 	var/icon_type
 
-/datum/chemical_simulator_modes/supress
+/datum/chemical_simulator_modes/suppress
 	name = "SUPRESS"
-	desc = "Supress one level in the choosen property. This operation lowers the OD level."
+	desc = "Suppress one level in the choosen property. This operation lowers the OD level."
 	mode_id = MODE_SUPPRESS
 	icon_type = "square-minus"
 
