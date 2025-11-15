@@ -1075,7 +1075,7 @@
 	for(var/i=1 to max_storage_space)
 		var/pill_to_fill = pick(cool_pills)
 		var/obj/item/reagent_container/pill/P = new pill_to_fill(src)
-		P.identificable = FALSE
+		P.identifiable = FALSE
 
 /obj/item/storage/pill_bottle/mystery/skillless
 	skilllock = SKILL_MEDICAL_DEFAULT

@@ -284,7 +284,7 @@
 
 /obj/item/card/id/marshal
 	name = "\improper CMB marshal gold badge"
-	desc = "A coveted gold badge signifying that the wearer is one of the few CMB Marshals patroling the outer rim. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
+	desc = "A coveted gold badge signifying that the wearer is one of the few CMB Marshals patrolling the outer rim. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
 	icon_state = "cmbmar"
 	id_type = "Badge"
 	item_state = "cmbmar"

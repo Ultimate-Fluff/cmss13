@@ -303,7 +303,7 @@
 	var/source_turf = get_turf(user)
 	var/smoke_range = 5 // the max range the smoke will travel
 	var/distance = 0 // the distance traveled
-	var/use_multiplier = 3 // if you want to increase the ammount of units drained from the tank
+	var/use_multiplier = 3 // if you want to increase the amount of units drained from the tank
 	var/units_in_smoke = 35 // the smoke overlaps a little so this much is probably already good
 
 	var/datum/reagent/chemical = current_mag.reagents.reagent_list[1]
@@ -314,10 +314,10 @@
 	var/turf/turfs[] = get_line(user, target, FALSE)
 	var/turf/first_turf = turfs[1]
 	var/turf/second_turf = turfs[2]
-	var/ammount_required = (min(length(turfs), smoke_range) * use_multiplier) // the ammount of units that this click requires
+	var/amount_required = (min(length(turfs), smoke_range) * use_multiplier) // the amount of units that this click requires
 	for(var/turf/turf in turfs)
 
-		if(chemical.volume < ammount_required)
+		if(chemical.volume < amount_required)
 			smoke_range = floor(chemical.volume / use_multiplier)
 
 		if(distance >= smoke_range)
@@ -344,9 +344,9 @@
 
 		distance++
 
-	var/ammount_used = distance * use_multiplier // the actual ammount of units that we used
+	var/amount_used = distance * use_multiplier // the actual amount of units that we used
 
-	chemical.volume = max(chemical.volume - ammount_used, 0)
+	chemical.volume = max(chemical.volume - amount_used, 0)
 
 	current_mag.reagents.total_volume = chemical.volume // this is needed for show_percentage to work
 
@@ -363,15 +363,15 @@
 	var/source_turf = get_turf(user)
 	var/foam_range = 6 // the max range the foam will travel
 	var/distance = 0 // the distance traveled
-	var/use_multiplier = 3 // if you want to increase the ammount of foam drained from the tank
+	var/use_multiplier = 3 // if you want to increase the amount of foam drained from the tank
 	var/datum/reagent/chemical = current_mag.reagents.reagent_list[1]
 
 	var/turf/turfs[] = get_line(user, target, FALSE)
 	var/turf/first_turf = turfs[1]
-	var/ammount_required = (min(length(turfs), foam_range) * use_multiplier) // the ammount of units that this click requires
+	var/amount_required = (min(length(turfs), foam_range) * use_multiplier) // the amount of units that this click requires
 	for(var/turf/turf in turfs)
 
-		if(chemical.volume < ammount_required)
+		if(chemical.volume < amount_required)
 			foam_range = floor(chemical.volume / use_multiplier)
 
 		if(distance >= foam_range)
@@ -397,9 +397,9 @@
 
 		distance++
 
-	var/ammount_used = distance * use_multiplier // the actual ammount of units that we used
+	var/amount_used = distance * use_multiplier // the actual amount of units that we used
 
-	chemical.volume = max(chemical.volume - ammount_used, 0)
+	chemical.volume = max(chemical.volume - amount_used, 0)
 
 	current_mag.reagents.total_volume = chemical.volume // this is needed for show_percentage to work
 

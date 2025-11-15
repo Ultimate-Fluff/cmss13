@@ -71,7 +71,7 @@
 	icon_state = "gygax_harness"
 /obj/structure/prop/mech/parts/gygax_head
 	name="MAX Head"
-	desc="A MAX head. Houses advanced surveilance and targeting sensors."
+	desc="A MAX head. Houses advanced surveillance and targeting sensors."
 	icon_state = "gygax_head"
 /obj/structure/prop/mech/parts/gygax_left_arm
 	name="MAX Left Arm"

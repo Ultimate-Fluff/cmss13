@@ -492,7 +492,7 @@
 /obj/structure/sign/safety/refridgeration
 	name = "refrigeration semiotic"
 	desc = "Semiotic Standard denoting the nearby presence of non-food refrigeration."
-	icon_state = "refridgeration"
+	icon_state = "refridgeration" //pls spell better
 
 /obj/structure/sign/safety/rewire
 	name = "rewire system semiotic"
@@ -576,12 +576,12 @@
 
 /obj/structure/sign/safety/luggageclaim
 	name = "\improper luggage claim semiotic"
-	desc = "Semiotic Standard denoting the presecense of a luggage claim area nearby."
+	desc = "Semiotic Standard denoting the presence of a luggage claim area nearby."
 	icon_state = "luggageclaim"
 
 /obj/structure/sign/safety/landingzone
 	name = "\improper landing zone semiotic"
-	desc = "Semiotic Standard denoting the presecense of a landing zone nearby."
+	desc = "Semiotic Standard denoting the presence of a landing zone nearby."
 	icon_state = "landingzone"
 
 /obj/structure/sign/safety/zero
@@ -640,7 +640,7 @@
 
 /obj/structure/sign/ROsign
 	name = "\improper USCM Requisitions Office Guidelines"
-	desc = " 1. You are not entitled to service or equipment. Attachments are a privilege, not a right.\n 2. You must be fully dressed to obtain service. Cryosleep underwear is non-permissible.\n 3. The Quartermaster has the final say and the right to decline service. Only the Acting Commanding Officer may override their decisions.\n 4. Please treat your Requsitions staff with respect. They work hard."
+	desc = " 1. You are not entitled to service or equipment. Attachments are a privilege, not a right.\n 2. You must be fully dressed to obtain service. Cryosleep underwear is non-permissible.\n 3. The Quartermaster has the final say and the right to decline service. Only the Acting Commanding Officer may override their decisions.\n 4. Please treat your Requisitions staff with respect. They work hard."
 	icon_state = "roplaque"
 	deconstructable = FALSE
 
@@ -684,7 +684,7 @@
 		Across Europe and the Pacific, I drove and dug and fought till the job was done.
 
 		When war came to the Peninsula in 1950, it was my 'chutes that filled the grey Korean skies.
-		From the perimeter at Pusan to the cold roads of the Chosin, I was there.
+		From the perimeter at Pusan to the cold roads of the Chosen, I was there.
 		In 1965, I established the fire bases and depots across South Vietnam,
 		The Hueys and Chinooks carried my supplies forward.
 

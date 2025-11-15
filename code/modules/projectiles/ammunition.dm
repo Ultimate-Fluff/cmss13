@@ -266,7 +266,7 @@ bullets/shells. ~N
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/ammo_righthand.dmi',
 		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/ammo.dmi',
 	)
-	matter = list("metal" = 50) //This changes based on the ammo ammount. 5k is the base of one shell/bullet.
+	matter = list("metal" = 50) //This changes based on the ammo amount. 5k is the base of one shell/bullet.
 	flags_equip_slot = null // It only fits into pockets and such.
 	w_class = SIZE_SMALL
 	current_rounds = 1 // So it doesn't get autofilled for no reason.

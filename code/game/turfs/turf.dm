@@ -551,7 +551,7 @@
 		while(ispath(turf_type, /turf/baseturf_skipover))
 			amount++
 			if(amount > length(new_baseturfs))
-				CRASH("The bottomost baseturf of a turf is a skipover [src]([type])")
+				CRASH("The bottom most baseturf of a turf is a skipover [src]([type]).")
 			turf_type = new_baseturfs[max(1, length(new_baseturfs) - amount + 1)]
 		new_baseturfs.len -= min(amount, length(new_baseturfs) - 1) // No removing the very bottom
 		if(length(new_baseturfs) == 1)

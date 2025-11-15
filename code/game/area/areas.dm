@@ -55,7 +55,7 @@
 	var/list/soundscape_playlist = list() //Clients in this area will hear one of the sounds in this list from time to time
 	var/soundscape_interval = INITIAL_SOUNDSCAPE_COOLDOWN //The base interval between each soundscape.
 	var/ceiling_muffle = TRUE //If true, this area's ceiling type will alter the muffling of the ambience sound
-	var/base_muffle = 0 //Ambience will always be muffled by this ammount at minimum
+	var/base_muffle = 0 //Ambience will always be muffled by this amount at minimum
 						//NOTE: Values from 0 to -10000 ONLY. The rest won't work
 	/// Default sound to play as ambience for clients entering the area
 	VAR_PROTECTED/ambience_exterior
