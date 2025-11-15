@@ -342,7 +342,7 @@ the implant may become unstable and either pre-maturely inject the subject or si
 <HR>
 <b>Implant Details:</b><BR>
 <b>Function:</b> Marks the host as WY property and allow special monitoring functions.<BR>
-<b>Special Features:</b> Will make the host more resistent to brainwashing techniques.<BR>
+<b>Special Features:</b> Will make the host more resistant to brainwashing techniques.<BR>
 <b>Integrity:</b> Implant will last approximately ten years."}
 	return dat
 

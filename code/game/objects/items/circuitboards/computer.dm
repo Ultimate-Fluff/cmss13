@@ -264,7 +264,7 @@
 	build_path = /obj/structure/machinery/computer/telecomms/server
 
 /obj/item/circuitboard/computer/comm_traffic
-	name = "Circuitboard (Telecommunications Traffic Control)"
+	name = "Circuit board (Telecommunications Traffic Control)"
 	build_path = /obj/structure/machinery/computer/telecomms/traffic
 
 
@@ -293,7 +293,7 @@
 			to_chat(user, SPAN_DANGER("Circuit controls are locked."))
 			return
 		var/existing_networks = jointext(network,",")
-		var/input = strip_html(input(usr, "Which networks would you like to connect this camera console circuit to? Separate networks with a comma. No Spaces!\nFor example: military,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
+		var/input = strip_html(input(usr, "Which networks would you like to connect this camera console circuit to? Separate networks with a comma. No Spaces!\nFor example: military,Security,Secret ", "Multitool-Circuit-Board interface", existing_networks))
 		if(!input)
 			to_chat(usr, "No input found please hang up and try your call again.")
 			return

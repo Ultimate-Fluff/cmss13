@@ -3,7 +3,7 @@
 GLOBAL_LIST_INIT(cm_vending_clothing_corporate_liaison, list(
 	list("SUITS AND UNDERSHIRTS (CHOOSE 5)", 0, null, null, null),
 	list("Black Suit Pants", 0, /obj/item/clothing/under/liaison_suit/black, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_RECOMMENDED),
-	list("Black Suitskirt", 0, /obj/item/clothing/under/liaison_suit/black/skirt, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_RECOMMENDED),
+	list("Black Suit-Skirt", 0, /obj/item/clothing/under/liaison_suit/black/skirt, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_RECOMMENDED),
 	list("Blue Suit Pants", 0, /obj/item/clothing/under/liaison_suit/blue, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Brown Suit Pants", 0, /obj/item/clothing/under/liaison_suit/brown, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("White Suit Pants", 0, /obj/item/clothing/under/liaison_suit/corporate_formal, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
@@ -11,7 +11,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_corporate_liaison, list(
 	list("Worn Suit", 0, /obj/item/clothing/under/detective/neutral, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Liaison's Tan Suit", 0, /obj/item/clothing/under/liaison_suit, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Liaison's Charcoal Suit", 0, /obj/item/clothing/under/liaison_suit/charcoal, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
-	list("Liaison's Charcoal Suitskirt", 0, /obj/item/clothing/under/liaison_suit/charcoal/skirt, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
+	list("Liaison's Charcoal Suit-Skirt", 0, /obj/item/clothing/under/liaison_suit/charcoal/skirt, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Liaison's White Suit", 0, /obj/item/clothing/under/liaison_suit/formal, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Liaison's Blue Blazer", 0, /obj/item/clothing/under/liaison_suit/blazer, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 	list("Liaison's Suspenders", 0, /obj/item/clothing/under/liaison_suit/suspenders, CIVILIAN_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
@@ -90,8 +90,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_corporate_liaison, list(
 	list("Fancy Monocle", 0, /obj/item/clothing/glasses/monocle, CIVILIAN_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 	list("SHOES (CHOOSE 2)", 0, null, null, null),
-	list("Laceup Shoes, Black", 0, /obj/item/clothing/shoes/laceup, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
-	list("Laceup Shoes, Brown", 0, /obj/item/clothing/shoes/laceup/brown, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
+	list("Lace-up Shoes, Black", 0, /obj/item/clothing/shoes/laceup, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
+	list("Lace-up Shoes, Brown", 0, /obj/item/clothing/shoes/laceup/brown, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
 	list("Fancy Leather Shoes", 0, /obj/item/clothing/shoes/leather/fancy, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
 	list("Sneakers, Black", 0, /obj/item/clothing/shoes/black, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
 	list("Corporate Boots", 0, /obj/item/clothing/shoes/marine/corporate, CIVILIAN_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),

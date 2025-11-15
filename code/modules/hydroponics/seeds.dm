@@ -300,7 +300,7 @@
 	seed_type = "deathberries"
 	name = "pack of deathberry seeds"
 
-/obj/item/seeds/grassseed
+/obj/item/seeds/grass_seed
 	seed_type = "grass"
 	name = "pack of grass seeds"
 

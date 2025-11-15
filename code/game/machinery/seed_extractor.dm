@@ -2,7 +2,7 @@
 	name = "seed extractor"
 	desc = "Extracts and bags seeds from produce."
 	icon = 'icons/obj/structures/machinery/hydroponics.dmi'
-	icon_state = "sextractor"
+	icon_state = "sextractor" //hehe funni
 	density = TRUE
 	anchored = TRUE
 
@@ -59,7 +59,7 @@
 		var/obj/item/stack/tile/grass/grass = object
 		if (grass.use(1))
 			to_chat(user, SPAN_NOTICE("You extract some seeds from the grass tile."))
-			new /obj/item/seeds/grassseed(loc)
+			new /obj/item/seeds/grass_seed(loc)
 			return TRUE
 	else
 		to_chat(user, SPAN_WARNING("Cannot get seeds from [object]."))

@@ -1,6 +1,6 @@
 /obj/item/device/radio/listening_bug
 	name = "listening device"
-	desc = "A small, and disguisable, listening device."
+	desc = "A small and easily-disguised listening device."
 
 	icon = 'icons/obj/items/devices.dmi'
 	icon_state = "voice0"

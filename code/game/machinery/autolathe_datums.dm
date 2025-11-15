@@ -418,7 +418,7 @@
 	path = /obj/item/reagent_container/glass/beaker/bluespace
 
 /datum/autolathe/recipe/medilathe/bonesetter
-	name = "bonesetter"
+	name = "bone setter"
 	path = /obj/item/tool/surgery/bonesetter
 
 /datum/autolathe/recipe/medilathe/fixovein
@@ -430,7 +430,7 @@
 	path = /obj/item/bodybag/cryobag
 
 /datum/autolathe/recipe/medilathe/rollerbed
-	name = "rollerbed"
+	name = "roller bed"
 	path = /obj/item/roller
 
 /datum/autolathe/recipe/medilathe/pill_bottle

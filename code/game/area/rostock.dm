@@ -87,7 +87,7 @@
 	soundscape_interval = 120
 
 /area/rostock/medical/prep
-	name = "SSV Rostock - Medical Preperation Room"
+	name = "SSV Rostock - Medical Preparation Room"
 	icon_state = "medical"
 	fake_zlevel = 2 // lowerdeck
 	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
@@ -331,7 +331,7 @@
 	icon_state = "cryo"
 
 /area/rostock/lower_deck/prep
-	name = "SSV Rostock - Troop Preperation"
+	name = "SSV Rostock - Troop Preparation"
 	icon_state = "gruntrnr"
 
 /area/rostock/lower_deck/bunk

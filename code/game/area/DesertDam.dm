@@ -40,7 +40,7 @@
 	icon_state = "ass_line"
 
 /area/desert_dam/interior/lab_northeast/east_lab_maintenence
-	name = "East Lab Maintenence"
+	name = "East Lab Maintenance"
 	icon_state = "maintcentral"
 
 /area/desert_dam/interior/lab_northeast/east_lab_containment

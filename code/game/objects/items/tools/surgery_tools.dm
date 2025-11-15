@@ -478,7 +478,7 @@ t. optimisticdude
 
 /obj/item/tool/surgery/WYautopsy
 	name = "\improper Weyland Brand Automatic Autopsy System(TM)"
-	desc = "Putting the FUN back in Autopsy.  This little gadget performs an entire autopsy of whatever strange life form you've found in about 30 seconds."
+	desc = "Putting the FUN back in Autopsy.  This little gadget performs an entire autopsy of whatever strange lifeform you've found in about 30 seconds."
 	icon_state = "scalpel_laser_2"
 	damtype = "fire"
 	force = 0

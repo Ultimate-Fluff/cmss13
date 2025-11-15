@@ -13,7 +13,7 @@
 
 /obj/item/book/manual/engineering_guide
 	name = "Tools, Radiowaves And Electrical Grids"
-	desc = "A book containing basic and yet important information regarding engineering procedures."
+	desc = "A book containing basic, yet important information regarding engineering procedures."
 	icon_state = "book_engineering"
 	item_state = "book_engineering"
 	author = "Colonial Marines Engineer Association"

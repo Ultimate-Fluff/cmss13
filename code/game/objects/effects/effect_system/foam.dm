@@ -45,7 +45,7 @@
 	if(foamed_metal_type)
 		new foamed_metal_type(src.loc)
 
-	flick("[icon_state]-disolve", src)
+	flick("[icon_state]-disolve", src) //I won't change the icon state name in the dmi file, but I don't like the fact that it's misspelled.
 	QDEL_IN(src, 5)
 
 // transfer any reagents to the floor

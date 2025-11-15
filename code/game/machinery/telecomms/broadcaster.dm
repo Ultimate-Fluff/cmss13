@@ -82,7 +82,7 @@
 /proc/Broadcast_Message(datum/radio_frequency/connection, mob/M,
 						vmask, vmessage, obj/item/device/radio/radio,
 						message, name, job, realname, vname,
-						data, compression, list/level, freq, verbage = "says",
+						data, compression, list/level, freq, verbiage = "says",
 						datum/language/speaking = null, volume = RADIO_VOLUME_QUIET, listening_device = NOT_LISTENING_BUG)
 
 	/* ###### Prepare the radio connection ###### */
@@ -236,29 +236,29 @@
 		/* --- Process all the mobs that heard a masked voice (understood) --- */
 		if (length(heard_masked))
 			for (var/mob/R in heard_masked)
-				R.hear_radio(message,verbage, speaking, part_a, part_b, M, 0, name, volume)
+				R.hear_radio(message,verbiage, speaking, part_a, part_b, M, 0, name, volume)
 
 		/* --- Process all the mobs that heard the voice normally (understood) --- */
 		if (length(heard_normal))
 			for (var/mob/R in heard_normal)
-				R.hear_radio(message, verbage, speaking, part_a, part_b, M, 0, realname, volume)
+				R.hear_radio(message, verbiage, speaking, part_a, part_b, M, 0, realname, volume)
 
 		/* --- Process all the mobs that heard the voice normally (did not understand) --- */
 		if (length(heard_voice))
 			for (var/mob/R in heard_voice)
 				if(R.faction == M.faction)
-					R.hear_radio(message, verbage, speaking, part_a, part_b, M, 0, realname, volume)
+					R.hear_radio(message, verbiage, speaking, part_a, part_b, M, 0, realname, volume)
 				else
-					R.hear_radio(message, verbage, speaking, part_a, part_b, M, 0, vname, 0)
+					R.hear_radio(message, verbiage, speaking, part_a, part_b, M, 0, vname, 0)
 
 		/* --- Process all the mobs that heard a garbled voice (did not understand) --- */
 			// Displays garbled message (ie "f*c* **u, **i*er!")
 		if (length(heard_garbled))
 			for (var/mob/R in heard_garbled)
-				R.hear_radio(message, verbage, speaking, part_a, part_b, M, 1, vname, 0)
+				R.hear_radio(message, verbiage, speaking, part_a, part_b, M, 1, vname, 0)
 
 
 		/* --- Complete gibberish. Usually happens when there's a compressed message --- */
 		if (length(heard_gibberish))
 			for (var/mob/R in heard_gibberish)
-				R.hear_radio(message, verbage, speaking, part_a, part_b, M, 1, 0)
+				R.hear_radio(message, verbiage, speaking, part_a, part_b, M, 1, 0)

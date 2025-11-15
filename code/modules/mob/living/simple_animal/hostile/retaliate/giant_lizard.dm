@@ -361,7 +361,7 @@
 		playsound(loc, 'sound/weapons/alien_knockdown.ogg', 25, 1)
 		KnockDown(0.4)
 
-//apply blood splatter when attacked by a sufficently damaging sharp weapon
+//apply blood splatter when attacked by a sufficiently damaging sharp weapon
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/attackby(obj/item/weapon, mob/living/carbon/human/attacker)
 	if(weapon.force > 10 && weapon.sharp && attacker.a_intent != INTENT_HELP)
 		handle_blood_splatter(get_dir(attacker.loc, loc))

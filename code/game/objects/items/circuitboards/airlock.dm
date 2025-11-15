@@ -9,7 +9,7 @@
 	var/list/conf_access = null
 	/// if set to 1, door would receive req_one_access instead of req_access
 	var/one_access = 0
-	var/last_configurator = null
+	var/last_configurer = null
 	var/locked = 1
 	var/fried = FALSE
 
@@ -29,8 +29,8 @@
 	var/t1
 
 
-	if (last_configurator)
-		t1 += "Operator: [last_configurator]<br>"
+	if (last_configurer)
+		t1 += "Operator: [last_configurer]<br>"
 
 	if (locked)
 		t1 += "<a href='byond://?src=\ref[src];login=1'>Swipe ID</a><hr>"
@@ -72,12 +72,12 @@
 	if (href_list["login"])
 		if(istype(usr,/mob/living/silicon))
 			src.locked = 0
-			src.last_configurator = usr.name
+			src.last_configurer = usr.name
 		else
 			var/obj/item/I = usr.get_active_hand()
 			if (I && src.check_access(I))
 				src.locked = 0
-				src.last_configurator = I:registered_name
+				src.last_configurer = I:registered_name
 
 	if (locked)
 		return
