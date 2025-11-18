@@ -119,7 +119,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 		return FALSE
 
 	if(ammo <= 0)
-		to_chat(H, SPAN_WARNING("[icon2html(src)] No more shells remaining in the barrel. Please wait for automatic reloading. [SPAN_BOLD("([ammo]/[max_ammo])")]"))
+		to_chat(H, SPAN_WARNING("[icon2html(src)] No more shells remaining in the barrel. Please wait for automatic reloading. [SPAN_BOLD("([ammo]/[max_ammo])")]."))
 		return FALSE
 
 	return TRUE

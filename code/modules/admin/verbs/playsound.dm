@@ -42,9 +42,9 @@
 				break
 
 		if(!istype(response))
-			to_chat(src, SPAN_BOLDWARNING("All configured web media players failed to provide a valid response:"))
+			to_chat(src, SPAN_BOLDWARNING("All configured web media players failed to provide a valid response:."))
 			for(var/datum/internet_media/player as anything in media_players)
-				to_chat(src, SPAN_WARNING("[player.type] error: [player.error]"))
+				to_chat(src, SPAN_WARNING("[player.type] error: [player.error]."))
 			return
 
 		data = response.get_list()
@@ -92,8 +92,8 @@
 		music_extra_data["title"] = data["title"]
 
 	if(!must_send_assets && web_sound_url && !findtext(web_sound_url, GLOB.is_http_protocol))
-		to_chat(src, SPAN_BOLDWARNING("BLOCKED: Content URL not using http(s) protocol"), confidential = TRUE)
-		to_chat(src, SPAN_WARNING("The media provider returned a content URL that isn't using the HTTP or HTTPS protocol"), confidential = TRUE)
+		to_chat(src, SPAN_BOLDWARNING("BLOCKED: Content URL not using http(s) protocol."), confidential = TRUE)
+		to_chat(src, SPAN_WARNING("The media provider returned a content URL that isn't using the HTTP or HTTPS protocol."), confidential = TRUE)
 		return
 
 
@@ -147,7 +147,7 @@
 				SSassets.transport.send_assets(client, asset_name)
 			client?.tgui_panel?.play_music(web_sound_url, music_extra_data)
 			if(announce_title)
-				to_chat(client, SPAN_BOLDANNOUNCE("An admin played: [music_extra_data["title"]]"), confidential = TRUE)
+				to_chat(client, SPAN_BOLDANNOUNCE("An admin played: [music_extra_data["title"]]."), confidential = TRUE)
 		else
 			client?.tgui_panel?.stop_music()
 

@@ -1244,7 +1244,7 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 				continue
 			playsound_client(M.client, 'sound/effects/ob_alert.ogg', M)
 			to_chat(M, SPAN_HIGHDANGER("Orbital bombardment launch command detected!"))
-			to_chat(M, SPAN_DANGER("Launch command informs [ob_type] warhead. Estimated impact area: [ob_area.name]"))
+			to_chat(M, SPAN_DANGER("Launch command informs [ob_type] warhead. Estimated impact area: [ob_area.name]."))
 
 
 /obj/structure/machinery/computer/overwatch/proc/mark_insubordination()

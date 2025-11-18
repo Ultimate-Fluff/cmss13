@@ -1383,7 +1383,7 @@
 	else
 		to_chat(H, SPAN_NOTICE("You expose your ID chip."))
 		if(!H.equip_to_slot_if_possible(embedded_id, WEAR_ID))
-			to_chat(H, SPAN_WARNING("Something went wrong during your chip's deployment! (Make a Bug Report about this)"))
+			to_chat(H, SPAN_WARNING("Something went wrong during your chip's deployment! (Make a Bug Report about this!)."))
 			move_chip_to_bracer()
 
 /obj/item/clothing/gloves/yautja/hunter/proc/move_chip_to_bracer()

@@ -219,7 +219,7 @@
 			for(var/datum/view_record/stickyban/sticky as anything in stickies)
 				impacting_stickies += sticky.identifier
 
-			to_chat(owner, SPAN_ADMIN("Found the following stickybans for [ckey]: [english_list(impacting_stickies)]"))
+			to_chat(owner, SPAN_ADMIN("Found the following stickybans for [ckey]: [english_list(impacting_stickies)]."))
 
 		if(!check_rights_for(owner, R_BAN))
 			return
@@ -513,7 +513,7 @@
 				return
 			var/reason = input("Please enter reason")
 			if(!reason)
-				to_chat_forced(M, SPAN_WARNING("You have been kicked from the server"))
+				to_chat_forced(M, SPAN_WARNING("You have been kicked from the server."))
 			else
 				to_chat_forced(M, SPAN_WARNING("You have been kicked from the server: [reason]"))
 			message_admins("[key_name_admin(usr)] booted [key_name_admin(M)].")
@@ -591,7 +591,7 @@
 
 		var/mob/living/carbon/xenomorph/X = locate(href_list["xenoresetname"])
 		if(!isxeno(X))
-			to_chat(usr, SPAN_WARNING("Not a xeno"))
+			to_chat(usr, SPAN_WARNING("Not a xeno."))
 			return
 
 		if(alert("Are you sure you want to reset xeno name for [X.ckey]?", , "Yes", "No") != "Yes")
@@ -635,7 +635,7 @@
 
 
 		if(!isxeno(X))
-			to_chat(usr, SPAN_WARNING("Not a xeno"))
+			to_chat(usr, SPAN_WARNING("Not a xeno."))
 			return
 
 		if(alert("Are you sure you want to BAN [X.ckey] from ever using any xeno name?", , "Yes", "No") != "Yes")
@@ -2227,6 +2227,6 @@
 						ai_silent_announcement("COMMUNICATIONS REPORT: Fax Machine [target_fax.machine_id_tag], [target_fax.sub_name ? "[target_fax.sub_name]" : ""], now receiving priority fax.", "[target_fax.radio_alert_tag]")
 
 			to_chat(src.owner, "Message reply to transmitted successfully.")
-			message_admins(SPAN_STAFF_IC("[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(target_human)]"), 1)
+			message_admins(SPAN_STAFF_IC("[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(target_human)]."), 1)
 			return
 	to_chat(src.owner, SPAN_RED("Unable to locate fax!"))

@@ -224,7 +224,7 @@
 		castes_available += initial(current_caste.caste_type)
 
 	var/castes = castes_available.Join(", ")
-	xeno_message(SPAN_XENOANNOUNCE("The Hive is now strong enough to support: [castes]"))
+	xeno_message(SPAN_XENOANNOUNCE("The Hive is now strong enough to support: [castes]."))
 	xeno_maptext("The Hive can now support: [castes]", "Hive Strengthening")
 	evo_screech()
 

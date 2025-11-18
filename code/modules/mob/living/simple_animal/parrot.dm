@@ -562,7 +562,7 @@
 		return -1
 
 	if(held_item)
-		to_chat(src, SPAN_DANGER("You are already holding [held_item]"))
+		to_chat(src, SPAN_DANGER("You are already holding [held_item]."))
 		return 1
 
 	for(var/obj/item/I in view(1,src))
@@ -590,7 +590,7 @@
 		return -1
 
 	if(held_item)
-		to_chat(src, SPAN_DANGER("You are already holding [held_item]"))
+		to_chat(src, SPAN_DANGER("You are already holding [held_item]."))
 		return 1
 
 	var/obj/item/stolen_item = null

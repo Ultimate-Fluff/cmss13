@@ -246,7 +246,7 @@
 	set name = "Create Bank Account"
 
 	if(!ishuman(target))
-		to_chat(src, SPAN_WARNING("This only works on humans"))
+		to_chat(src, SPAN_WARNING("This only works on humans."))
 		return
 
 	var/mob/living/carbon/human/account_user = target

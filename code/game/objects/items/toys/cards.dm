@@ -475,7 +475,7 @@
 			var/card_names = list()
 			for(var/datum/playing_card/P as anything in cards)
 				card_names += P.name
-			. += SPAN_NOTICE("The cards are: [english_list(card_names)]")
+			. += SPAN_NOTICE("The cards are: [english_list(card_names)].")
 
 
 /obj/item/toy/handcard/update_icon(direction = 0)
