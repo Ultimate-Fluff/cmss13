@@ -715,7 +715,7 @@
 										to_chat(usr, R.fields["com_[counter]"])
 										counter++
 									if(counter == 1)
-										to_chat(usr, "No comment found")
+										to_chat(usr, "No comment found.")
 									to_chat(usr, "<a href='byond://?src=\ref[src];medrecordadd=1'>\[Add comment\]</a>")
 
 			if(!read)

@@ -361,7 +361,7 @@ K9 SCANNER
 		result += SPAN_BLUE("<br>Intensity: [min(chem.intensityfire, tank.max_intensity)]")
 		result += SPAN_BLUE("<br>Duration: [min(chem.durationfire, tank.max_duration)]")
 		result += SPAN_BLUE("<br>Range: [min(chem.rangefire, tank.max_range)]")
-		to_chat(user, SPAN_NOTICE("[result]"))
+		to_chat(user, SPAN_NOTICE("[result]."))
 		return
 
 	if(istype(O,/obj/item/explosive))

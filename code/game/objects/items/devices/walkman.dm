@@ -352,7 +352,7 @@
 	else
 		flipped = TRUE
 		icon_state = "cassette_flip"
-	to_chat(user,"You flip [src]")
+	to_chat(user,"You flip [src].")
 
 /obj/item/device/cassette_tape/verb/flip()
 	set name = "Flip tape"

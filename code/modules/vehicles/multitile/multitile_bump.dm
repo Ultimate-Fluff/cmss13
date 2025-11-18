@@ -605,7 +605,7 @@
 		if(get_target_lock(driver.faction))
 			apply_effect(0.5, WEAKEN)
 			apply_damage(5 + rand(0, 5), BRUTE, no_limb_loss = TRUE)
-			to_chat(V.seats[VEHICLE_DRIVER], SPAN_WARNING(SPAN_BOLD("*YOU RAMMED AN ALLY AND HURT THEM!*")))
+			to_chat(V.seats[VEHICLE_DRIVER], SPAN_WARNING(SPAN_BOLD("*YOU RAMMED AN ALLY AND HURT THEM!*.")))
 		else
 			apply_effect(2, WEAKEN)
 			apply_damage(10 + rand(0, 10), BRUTE)

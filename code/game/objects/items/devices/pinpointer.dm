@@ -137,7 +137,7 @@
 
 			location = locate(locationx,locationy,Z.z)
 
-			to_chat(usr, "You set the pinpointer to locate [locationx],[locationy]")
+			to_chat(usr, "You set the pinpointer to locate [locationx],[locationy].")
 
 
 			return attack_self()
