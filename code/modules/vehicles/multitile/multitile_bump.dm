@@ -137,7 +137,7 @@
 	reagents.source_mob = V.seats[VEHICLE_DRIVER]
 	if(reagents.handle_volatiles())
 		if(V.seats[VEHICLE_DRIVER])
-			log_game("[key_name(V.seats[VEHICLE_DRIVER])] exploded [name] by ramming it with [V] in [get_area(src)] ([loc.x],[loc.y],[loc.z]).")
+			log_game("[key_name(V.seats[VEHICLE_DRIVER])] exploded [name] by ramming it with [V] in [get_area(src)] ([loc.x],[loc.y],[loc.z].)")
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src], causing explosion!"))
 	else
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))

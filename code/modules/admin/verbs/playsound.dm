@@ -42,9 +42,9 @@
 				break
 
 		if(!istype(response))
-			to_chat(src, SPAN_BOLDWARNING("All configured web media players failed to provide a valid response:."))
+			to_chat(src, SPAN_BOLDWARNING("All configured web media players failed to provide a valid response:"))
 			for(var/datum/internet_media/player as anything in media_players)
-				to_chat(src, SPAN_WARNING("[player.type] error: [player.error]."))
+				to_chat(src, SPAN_WARNING("[player.type] error: [player.error]"))
 			return
 
 		data = response.get_list()

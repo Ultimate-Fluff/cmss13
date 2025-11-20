@@ -43,11 +43,11 @@
 				return
 		opening_time = 4 SECONDS
 		opening_sound = 'sound/items/can_open2.ogg'
-		to_chat(user, SPAN_NOTICE("You begin to open the can with a can opener. [hiss]."))
+		to_chat(user, SPAN_NOTICE("You begin to open the can with a can opener. [hiss]"))
 	if(opening_tool.type in CAN_OPENER_CRUDE)
 		opening_time = 12 SECONDS
 		opening_sound = 'sound/items/can_open1.ogg'
-		to_chat(user, SPAN_NOTICE("You begin to crudely jam the can with a blade. [hiss]."))
+		to_chat(user, SPAN_NOTICE("You begin to crudely jam the can with a blade. [hiss]"))
 
 	playsound(src.loc, opening_sound, 15, FALSE, 5)
 

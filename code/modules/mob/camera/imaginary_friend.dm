@@ -177,7 +177,7 @@
 
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
-			to_chat(src, SPAN_DANGER("You cannot send IC messages (muted)."))
+			to_chat(src, SPAN_DANGER("You cannot send IC messages (muted.)"))
 			return
 
 		if(client.handle_spam_prevention(message, MUTE_IC))
@@ -216,7 +216,7 @@
 		if(isnewplayer(ghost) || src == ghost)
 			continue
 		var/link = "<a href='byond://?src=\ref[ghost];track=\ref[src]'>F</a>"
-		to_chat(ghost, "[dead_rendered] ([link]).")
+		to_chat(ghost, "[dead_rendered] ([link])")
 
 /mob/camera/imaginary_friend/Move(newloc, Dir = 0)
 	if(world.time < move_delay)

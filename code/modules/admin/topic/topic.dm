@@ -969,7 +969,7 @@
 			return
 
 		L.revive()
-		message_admins(WRAP_STAFF_LOG(usr, "ahealed [key_name(L)] in [get_area(L)] ([L.x],[L.y],[L.z])."), L.x, L.y, L.z)
+		message_admins(WRAP_STAFF_LOG(usr, "ahealed [key_name(L)] in [get_area(L)] ([L.x],[L.y],[L.z].)"), L.x, L.y, L.z)
 
 	else if(href_list["makealien"])
 		if(!check_rights(R_SPAWN))

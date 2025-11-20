@@ -316,7 +316,7 @@
 
 			var/validation_error = validate_field(field, value, user, FALSE)
 			if (validation_error)
-				to_chat(user, SPAN_WARNING("Console returns error with buzzing sound: [validation_error]."))
+				to_chat(user, SPAN_WARNING("Console returns error with buzzing sound: [validation_error]"))
 				playsound(loc, 'sound/machines/buzz-two.ogg', 15, TRUE)
 				return
 

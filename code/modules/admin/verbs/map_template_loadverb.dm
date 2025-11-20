@@ -73,7 +73,7 @@
 
 	SSmapping.map_templates[M.name] = M
 	message_admins(SPAN_ADMINNOTICE("[key_name_admin(src)] has uploaded a map template '[map]' ([M.width]x[M.height])[report_link]."))
-	to_chat(src, SPAN_NOTICE("Map template '[map]' ready to place ([M.width]x[M.height])."), confidential = TRUE)
+	to_chat(src, SPAN_NOTICE("Map template '[map]' ready to place ([M.width]x[M.height].)"), confidential = TRUE)
 
 /client/proc/force_load_lazy_template()
 	set name = "Map Template - Lazy Load/Jump"

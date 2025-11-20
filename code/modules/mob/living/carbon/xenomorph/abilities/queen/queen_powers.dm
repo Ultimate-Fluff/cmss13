@@ -864,7 +864,7 @@
 /datum/action/xeno_action/onclick/send_thoughts/proc/psychic_whisper()
 	var/mob/living/carbon/xenomorph/xeno_player = owner
 	if(xeno_player.client.prefs.muted & MUTE_IC)
-		to_chat(xeno_player, SPAN_DANGER("You cannot whisper (muted)."))
+		to_chat(xeno_player, SPAN_DANGER("You cannot whisper (muted.)"))
 		return
 	if(!xeno_player.check_state(TRUE))
 		return
@@ -909,7 +909,7 @@
 	if(!xeno_player.check_plasma(radiance_plasma_cost))
 		return
 	if(xeno_player.client.prefs.muted & MUTE_IC)
-		to_chat(xeno_player, SPAN_DANGER("You cannot whisper (muted)."))
+		to_chat(xeno_player, SPAN_DANGER("You cannot whisper (muted.)"))
 		return
 	if(!xeno_player.check_state(TRUE))
 		return

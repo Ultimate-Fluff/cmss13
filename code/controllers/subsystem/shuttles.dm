@@ -448,7 +448,7 @@ SUBSYSTEM_DEF(shuttle)
 	// but we can ignore the someone else docked error because we'll
 	// be moving into their place shortly
 	if((result != SHUTTLE_CAN_DOCK) && (result != SHUTTLE_SOMEONE_ELSE_DOCKED))
-		WARNING("Template shuttle [preview_shuttle] cannot dock at [dest_dock] ([result]).")
+		WARNING("Template shuttle [preview_shuttle] cannot dock at [dest_dock] ([result].)")
 		return
 
 	if(to_replace)

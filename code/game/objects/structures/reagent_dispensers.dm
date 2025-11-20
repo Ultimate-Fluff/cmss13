@@ -81,7 +81,7 @@
 	health -= Proj.damage
 	if(Proj.firer)
 		msg_admin_niche("[key_name_admin(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z]) [ADMIN_JMP(loc)].")
-		log_game("[key_name(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z]).")
+		log_game("[key_name(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z].)")
 	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
 	healthcheck()
 	return TRUE
@@ -335,7 +335,7 @@
 	if(Proj.damage > 10 && prob(60) && !reinforced)
 		if(Proj.firer)
 			message_admins("[key_name_admin(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z]) [ADMIN_JMP(loc)].")
-			log_game("[key_name(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z]).")
+			log_game("[key_name(Proj.firer)] fired a projectile at [name] in [loc.loc.name] ([loc.x],[loc.y],[loc.z].)")
 		exploding = TRUE
 		explode()
 

@@ -205,8 +205,8 @@
 		else
 			pass_flags |= PASS_MOB_THRU|PASS_HIGH_OVER
 
-	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
-	log_game("[key_name_admin(user)] used a grenade ([name]).")
+	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name].)")
+	log_game("[key_name_admin(user)] used a grenade ([name].)")
 
 	fired.throw_range = 20
 	fired.det_time = min(10, fired.det_time)

@@ -76,7 +76,7 @@
 			reference = B
 			ready = check_ready()
 		else
-			to_chat(user, )
+			to_chat(user, SPAN_WARNING("Chemical data [note.data ? "is already inserted" : "is refused"]"))
 			return
 	else
 		to_chat(user, SPAN_WARNING("[src] refuses [B]."))

@@ -1050,7 +1050,7 @@
 			qdel(warhead)
 			return
 
-		message_admins("[key_name(usr)] has fired \an [warhead.name] at ([target.x],[target.y],[target.z]).")
+		message_admins("[key_name(usr)] has fired \an [warhead.name] at ([target.x],[target.y],[target.z].)")
 		warhead.warhead_impact(target)
 
 	else

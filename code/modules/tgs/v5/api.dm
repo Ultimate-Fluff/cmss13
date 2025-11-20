@@ -154,7 +154,7 @@
 		return FALSE // continue to /world/Topic
 
 	if(!initialized)
-		TGS_WARNING_LOG("Missed topic due to not being initialized: [json].")
+		TGS_WARNING_LOG("Missed topic due to not being initialized: [json]")
 		return TRUE // too early to handle, but it's still our responsibility
 
 	return ProcessTopicJson(json, TRUE)

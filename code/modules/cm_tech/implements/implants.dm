@@ -102,9 +102,9 @@
 		QDEL_NULL(M.implants[implant_type])
 
 	if(self_inject)
-		to_chat(M, SPAN_NOTICE("You implant yourself with \the [src]. You feel [implant_string]."))
+		to_chat(M, SPAN_NOTICE("You implant yourself with \the [src]. You feel [implant_string]"))
 	else
-		to_chat(M, SPAN_NOTICE("You've been implanted with \the [src]. You feel [implant_string]."))
+		to_chat(M, SPAN_NOTICE("You've been implanted with \the [src]. You feel [implant_string]"))
 
 	playsound(src, 'sound/items/air_release.ogg', 75, TRUE)
 	var/obj/item/device/internal_implant/I = new implant_type(M)

@@ -6,7 +6,7 @@
 
 	if (src.client)
 		if(src.client.prefs.muted & MUTE_DEADCHAT)
-			to_chat(src, SPAN_DANGER("You cannot talk in deadchat (muted)."))
+			to_chat(src, SPAN_DANGER("You cannot talk in deadchat (muted.)"))
 			return
 
 		if (src.client.handle_spam_prevention(message, MUTE_DEADCHAT))

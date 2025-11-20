@@ -27,7 +27,7 @@ CLIENT_VERB(ooc, msg as text)
 			to_chat(usr, SPAN_DANGER("OOC for dead mobs has been turned off."))
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, SPAN_DANGER("You cannot use OOC (muted)."))
+			to_chat(src, SPAN_DANGER("You cannot use OOC (muted.)"))
 			return
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
@@ -139,7 +139,7 @@ CLIENT_VERB(looc, msg as text)
 			to_chat(usr, SPAN_DANGER("Sorry, you cannot utilize LOOC while dead or incapacitated."))
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, SPAN_DANGER("You cannot use LOOC (muted)."))
+			to_chat(src, SPAN_DANGER("You cannot use LOOC (muted.)"))
 			return
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return

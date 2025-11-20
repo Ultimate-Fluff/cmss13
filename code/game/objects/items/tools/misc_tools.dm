@@ -98,7 +98,7 @@
 			label = null
 			return
 		label = str
-		to_chat(user, SPAN_NOTICE("You set the text to '[str]'."))
+		to_chat(user, SPAN_NOTICE("You set the text to '[str].'"))
 		return
 
 	to_chat(user, SPAN_NOTICE("You turn off [src]."))

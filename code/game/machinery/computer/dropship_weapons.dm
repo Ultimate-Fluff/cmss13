@@ -744,7 +744,7 @@
 		return FALSE
 	// Check name
 	if(!firemission_name || length(firemission_name) < 1)
-		to_chat(weapon_operator, SPAN_WARNING("Name too short (at least 1 symbols)."))
+		to_chat(weapon_operator, SPAN_WARNING("Name too short (at least 1 symbols.)"))
 		return FALSE
 	// Check length
 	if(!firemission_length)
@@ -853,13 +853,13 @@
 	)
 	var/result = firemission_envelope.execute_firemission(recorded_loc, target, dir, fmId)
 	if(result != FIRE_MISSION_ALL_GOOD)
-		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]."))
+		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]"))
 	return TRUE
 
 /obj/structure/machinery/computer/dropship_weapons/proc/update_location(mob/user, new_location)
 	var/result = firemission_envelope.change_target_loc(new_location)
 	if(result<1)
-		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]."))
+		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]"))
 		return FALSE
 	return TRUE
 
@@ -867,7 +867,7 @@
 /obj/structure/machinery/computer/dropship_weapons/proc/update_direction(mob/user, new_direction)
 	var/result = firemission_envelope.change_direction(new_direction)
 	if(result<1)
-		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]."))
+		to_chat(user, SPAN_WARNING("Screen beeps with an error: [firemission_envelope.mission_error]"))
 		return FALSE
 	return TRUE
 

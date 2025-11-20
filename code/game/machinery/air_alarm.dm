@@ -953,7 +953,7 @@ table tr:first-child th:first-child { border: none;}
 			if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))  // Opening that Air Alarm up.
 				//to_chat(user, "You pop the Air Alarm's maintence panel open.")
 				wiresexposed = !wiresexposed
-				to_chat(user, "The wires have been [wiresexposed ? "exposed." : "unexposed."]")
+				to_chat(user, "The wires have been [wiresexposed ? "exposed" : "unexposed"].")
 				update_icon()
 				return
 

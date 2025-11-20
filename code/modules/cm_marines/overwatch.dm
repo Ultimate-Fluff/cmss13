@@ -893,7 +893,7 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 				return FALSE
 
 			if(user.client.prefs.muted & MUTE_IC)
-				to_chat(user, SPAN_DANGER("You cannot send Announcements (muted)."))
+				to_chat(user, SPAN_DANGER("You cannot send Announcements (muted.)"))
 				return
 
 			if((!COOLDOWN_FINISHED(src, cooldown_message) && announcement_type == "groundside") || (!COOLDOWN_FINISHED(src, cooldown_shipside_message) && announcement_type == "shipside"))
